@@ -1,0 +1,9 @@
+C:\Users\jackp\Documents\Git\SiteWeb\Rhéanova\Rhéanova\obj\Debug\net10.0\EmbeddedAttribute.cs
+C:\Users\jackp\Documents\Git\SiteWeb\Rhéanova\Rhéanova\obj\Debug\net10.0\ValidatableTypeAttribute.cs
+C:\Users\jackp\Documents\Git\SiteWeb\Rhéanova\Rhéanova\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\jackp\Documents\Git\SiteWeb\Rhéanova\Rhéanova\obj\Debug\net10.0\Rhéanova.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jackp\Documents\Git\SiteWeb\Rhéanova\Rhéanova\obj\Debug\net10.0\Rhéanova.AssemblyInfoInputs.cache
+C:\Users\jackp\Documents\Git\SiteWeb\Rhéanova\Rhéanova\obj\Debug\net10.0\Rhéanova.AssemblyInfo.cs
+C:\Users\jackp\Documents\Git\SiteWeb\Rhéanova\Rhéanova\obj\Debug\net10.0\Rhéanova.csproj.CoreCompileInputs.cache
+C:\Users\jackp\Documents\Git\SiteWeb\Rhéanova\Rhéanova\obj\Debug\net10.0\Rhéanova.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jackp\Documents\Git\SiteWeb\Rhéanova\Rhéanova\obj\Debug\net10.0\Rhéanova.sourcelink.json

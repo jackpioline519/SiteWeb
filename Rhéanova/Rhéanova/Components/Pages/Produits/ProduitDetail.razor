@@ -1,0 +1,64 @@
+@page "/produit/{Id:int}"
+@rendermode InteractiveServer
+@inject ProduitService ProduitService
+
+<PageTitle>Produit - AquariumShop</PageTitle>
+
+@if (_isLoading)
+{
+    <section class="section-block">
+        <div class="container-custom">
+            <p>Chargement du produit...</p>
+        </div>
+    </section>
+}
+else if (_produit is null)
+{
+    <section class="section-block">
+        <div class="container-custom">
+            <h1>Produit introuvable</h1>
+            <p>Le produit demandé n’existe pas ou n’est plus disponible.</p>
+        </div>
+    </section>
+}
+else
+{
+    <section class="section-block">
+        <div class="container-custom product-detail-grid">
+            <div class="product-detail-image-wrap">
+                <img src="@_produit.ImageUrl" alt="@_produit.Nom" class="product-detail-image" />
+            </div>
+
+            <div class="product-detail-content">
+                <span class="eyebrow">@_produit.Categorie</span>
+                <h1>@_produit.Nom</h1>
+                <p class="product-reference">Référence : @_produit.Reference</p>
+                <p class="product-description">@_produit.DescriptionLongue</p>
+                <p class="product-price">@_produit.Prix.ToString("0.00") €</p>
+                <p class="stock @( _produit.EnStock ? "in-stock" : "out-stock")">
+                    @(_produit.EnStock ? "En stock" : "Indisponible")
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn-primary-custom" href="/contact">Demander des informations</a>
+                    <a class="btn-secondary-custom" href="/rayons/capteurs">Retour aux rayons</a>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Produit? _produit;
+    private bool _isLoading = true;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _isLoading = true;
+        _produit = await ProduitService.GetByIdAsync(Id);
+        _isLoading = false;
+    }
+}

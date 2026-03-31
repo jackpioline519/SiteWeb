@@ -1,0 +1,40 @@
+@page "/rayons/capteurs"
+@rendermode InteractiveServer
+@inject ProduitService ProduitService
+
+<PageTitle>Capteurs - AquariumShop</PageTitle>
+
+<section class="page-header">
+    <div class="container-custom">
+        <span class="eyebrow">Rayon</span>
+        <h1>Capteurs</h1>
+        <p>Retrouvez ici les capteurs disponibles à l’achat séparément.</p>
+    </div>
+</section>
+
+<section class="section-block">
+    <div class="container-custom">
+        @if (_produits.Count == 0)
+        {
+            <p>Aucun produit disponible dans ce rayon.</p>
+        }
+        else
+        {
+            <div class="products-grid">
+                @foreach (var produit in _produits)
+                {
+                    <ProductCard Produit="produit" />
+                }
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    private List<Produit> _produits = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _produits = await ProduitService.GetByCategorieAsync("Capteurs");
+    }
+}

@@ -1,0 +1,16 @@
+<div class="category-card">
+    <h3>@Titre</h3>
+    <p>@Description</p>
+    <a class="btn-secondary-custom" href="@Lien">Voir le rayon</a>
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public string Titre { get; set; } = string.Empty;
+
+    [Parameter, EditorRequired]
+    public string Description { get; set; } = string.Empty;
+
+    [Parameter, EditorRequired]
+    public string Lien { get; set; } = string.Empty;
+}

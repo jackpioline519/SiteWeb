@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 1,
+    "Nom": "Capteur de température",
+    "DescriptionCourte": "Surveillance précise de la température de l’eau.",
+    "DescriptionLongue": "Capteur conçu pour mesurer la température de l’aquarium et transmettre les données au système principal pour affichage et suivi.",
+    "Prix": 19.99,
+    "ImageUrl": "/images/produits/capteur-temperature.jpg",
+    "Categorie": "Capteurs",
+    "EnStock": true,
+    "ProduitVedette": true,
+    "Reference": "CAP-TEMP-001"
+  },
+  {
+    "Id": 2,
+    "Nom": "Capteur de pH",
+    "DescriptionCourte": "Suivi du pH pour un meilleur contrôle du bac.",
+    "DescriptionLongue": "Permet de suivre l’évolution du pH et d’améliorer la stabilité du milieu, notamment pour les aquariums plantés et les bacs sensibles.",
+    "Prix": 49.90,
+    "ImageUrl": "/images/produits/capteur-ph.jpg",
+    "Categorie": "Capteurs",
+    "EnStock": true,
+    "ProduitVedette": true,
+    "Reference": "CAP-PH-002"
+  },
+  {
+    "Id": 3,
+    "Nom": "Système complet AquaControl",
+    "DescriptionCourte": "Solution centrale de surveillance et d’automatisation.",
+    "DescriptionLongue": "Le système principal centralise les capteurs, l’analyse et l’affichage des informations utiles pour surveiller le bac et faciliter sa gestion.",
+    "Prix": 249.00,
+    "ImageUrl": "/images/produits/systeme-complet.jpg",
+    "Categorie": "SystemesComplets",
+    "EnStock": true,
+    "ProduitVedette": true,
+    "Reference": "SYS-COMP-001"
+  },
+  {
+    "Id": 4,
+    "Nom": "Boîtier de protection",
+    "DescriptionCourte": "Boîtier pour intégration propre du système.",
+    "DescriptionLongue": "Boîtier conçu pour protéger l’électronique et permettre une installation plus propre et plus sécurisée autour de l’aquarium.",
+    "Prix": 29.90,
+    "ImageUrl": "/images/produits/boitier-protection.jpg",
+    "Categorie": "Accessoires",
+    "EnStock": true,
+    "ProduitVedette": false,
+    "Reference": "ACC-BOX-001"
+  }
+]

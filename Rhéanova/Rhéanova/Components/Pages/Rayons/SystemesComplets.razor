@@ -1,0 +1,40 @@
+@page "/rayons/systemes-complets"
+@rendermode InteractiveServer
+@inject ProduitService ProduitService
+
+<PageTitle>Systèmes complets - AquariumShop</PageTitle>
+
+<section class="page-header">
+    <div class="container-custom">
+        <span class="eyebrow">Rayon</span>
+        <h1>Systèmes complets</h1>
+        <p>Découvrez les solutions centrales prêtes à intégrer à votre installation.</p>
+    </div>
+</section>
+
+<section class="section-block">
+    <div class="container-custom">
+        @if (_produits.Count == 0)
+        {
+            <p>Aucun produit disponible dans ce rayon.</p>
+        }
+        else
+        {
+            <div class="products-grid">
+                @foreach (var produit in _produits)
+                {
+                    <ProductCard Produit="produit" />
+                }
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    private List<Produit> _produits = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _produits = await ProduitService.GetByCategorieAsync("SystemesComplets");
+    }
+}

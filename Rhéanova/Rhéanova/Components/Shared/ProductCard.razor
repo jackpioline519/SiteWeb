@@ -1,0 +1,25 @@
+@using AquariumShop.Models
+
+<div class="product-card">
+    <img src="@Produit.ImageUrl" alt="@Produit.Nom" class="product-image" />
+
+    <div class="product-body">
+        <span class="product-category">@Produit.Categorie</span>
+        <h3>@Produit.Nom</h3>
+        <p>@Produit.DescriptionCourte</p>
+
+        <div class="product-meta">
+            <span class="price">@Produit.Prix.ToString("0.00") €</span>
+            <span class="stock @(Produit.EnStock ? "in-stock" : "out-stock")">
+                @(Produit.EnStock ? "En stock" : "Indisponible")
+            </span>
+        </div>
+
+        <a class="btn-primary-custom" href="/produit/@Produit.Id">Voir le produit</a>
+    </div>
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public Produit Produit { get; set; } = default!;
+}
