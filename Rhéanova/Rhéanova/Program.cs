@@ -1,5 +1,5 @@
-using AquariumShop.Services;
-using AquariumShop.Components;
+using Rhéanova.Components;
+using Rhéanova.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
